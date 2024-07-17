@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        Role::create(['name' => 'admin']);
+        // Role::create(['name' => 'admin']);
 
         $superadmin = User::create([
             'name' => 'Admin',
@@ -22,6 +22,6 @@ class UserSeeder extends Seeder
             'password' => bcrypt('12345678'),
         ]);
 
-        $superadmin->assignRole('admin');
+        // $superadmin->assignRole('admin');
     }
 }

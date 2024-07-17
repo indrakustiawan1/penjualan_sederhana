@@ -21,8 +21,8 @@ return new class extends Migration
             $table->decimal('total_harga', 15, 2);
             $table->decimal('total_dibayar', 15, 2);
             $table->string('invoice');
-            $table->string('kode_voucher');
-            $table->string('status_voucher');
+            $table->string('kode_voucher')->nullable();
+            $table->string('status_voucher')->default('valid');
             $table->timestamps(); // Kolom created_at dan updated_at
         });
     }
